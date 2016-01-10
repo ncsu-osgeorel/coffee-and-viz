@@ -128,7 +128,41 @@
             width: 45%;
         }
 
-        /* classes for sections with predefined elements */
+        /* two columns which work with extra wide screen */
+        /* usable in place of left right but requires two wrapper divs */
+        .col-cont-out {
+            clear: left;
+            float: left;
+            width: 100%;
+            overflow: hidden;
+        }
+        .col-cont-in {
+            float: left;
+            width: 100%;
+            position: relative;
+            right: 50%;
+        }
+        .col1 {
+            float: left;
+            width: 46%;
+            position: relative;
+            left: 52%;
+            overflow: hidden;
+        }
+        .col1 > * {
+            float: right;
+        }
+        .col2 {
+            float: left;
+            width: 46%;
+            position: relative;
+            left: 56%;
+            overflow: hidden;
+        }
+        .col2 > * {
+            float: left;
+        }
+
         /* classes for sections with predefined elements */
         .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
             float: right;
@@ -270,12 +304,12 @@ Using Tangible Landscape</h1>
 <!-- Text template -->
 <section>
 <h2 style="margin-top: -2em">Key Management Issues</h2>
-	<br>
-	<center>
-		<div class="left">
+<div class="col-cont-out">
+	<div class="col-cont-in">
+		<div class="col1">
 			<img height="400" src="img/management_composite.png"> 
 		</div>
-		<div class="right">
+		<div class="col2">
 			<ul>
 				<li>Late identification: time to action counts!</li>
 				<li>Deployment of funding</li>
@@ -284,7 +318,8 @@ Using Tangible Landscape</h1>
 				<li>Allocation of management areas</li>
 			</ul>	
 		</div>
-	</center>
+	</div>
+</div>
 </section>
 
 <!-- Text template -->
