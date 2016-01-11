@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
+<!-- This is a generated file. Do not edit. -->
 
     <head>
         <meta charset="utf-8">
 
-        <title>Template for lecture slides</title>
+        <title>Coffee and Viz</title>
 
         <meta name="description" content="Template for lecture slides of NCSU OSGeoREL courses">
         <meta name="author" content="Vaclav Petras">
@@ -36,9 +37,7 @@
         <![endif]-->
 
         <style>
-        * {
-            /*font-family: Verdana, Geneva, sans-serif !important;*/
-        }
+
         body {
         /*background-color: #FFF !important;*/
         /*
@@ -127,6 +126,41 @@
             width: 45%;
         }
 
+        /* two columns which work with extra wide screen */
+        /* usable in place of left right but requires two wrapper divs */
+        .col-cont-out {
+            clear: left;
+            float: left;
+            width: 100%;
+            overflow: hidden;
+        }
+        .col-cont-in {
+            float: left;
+            width: 100%;
+            position: relative;
+            right: 50%;
+        }
+        .col1 {
+            float: left;
+            width: 46%;
+            position: relative;
+            left: 52%;
+            overflow: hidden;
+        }
+        .col1 > * {
+            float: right;
+        }
+        .col2 {
+            float: left;
+            width: 46%;
+            position: relative;
+            left: 56%;
+            overflow: hidden;
+        }
+        .col2 > * {
+            float: left;
+        }
+
         /* classes for sections with predefined elements */
         /* classes for sections with predefined elements */
         .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
@@ -150,5 +184,7 @@
 
         <div class="reveal">
 
-            <!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
+<!-- Any section element inside of this container is displayed as a slide -->
+
+<!-- Title page -->
+<div class="slides">
