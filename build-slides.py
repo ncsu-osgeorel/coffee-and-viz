@@ -52,6 +52,12 @@ def main():
                         help='Description of the material')
     parser.add_argument('--meta-author', dest='meta_author', action='store',
                         help='Author of the material')
+    parser.add_argument('--head', dest='head', action='store',
+                        help='Header (beginning) for generated the files',
+                        default='head.html')
+    parser.add_argument('--foot', dest='foot', action='store',
+                        help='Footer (ended) for generated the files',
+                        default='foot.html')
     parser.add_argument('--skip-copy-dirs', dest='skip_copy', action='store_true',
                         help='Do not copy usualy used directories (%s), works only if the directories are in the current working directory' % ', '.join(directories))
 
@@ -63,6 +69,9 @@ def main():
     title = args.title
     meta_description = args.meta_description
     meta_author = args.meta_author
+
+    head = args.head
+    foot = args.foot
 
     # not used
     # enable replacing of path in header?
@@ -76,8 +85,6 @@ def main():
     ensure_dir(outdir)
     outfile = os.path.join(outdir, outfile)
 
-    head = 'head.html'
-    foot = 'foot.html'
     if not os.path.exists(head):
         error_message("%s not found" % head)
         return 1

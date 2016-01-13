@@ -1,259 +1,129 @@
-<!doctype html>
-<html lang="en">
-<!-- This is a generated file. Do not edit. -->
-
-    <head>
-        <meta charset="utf-8">
-
-        <title>Coffee and Viz</title>
-
-        <meta name="description" content="Template for lecture slides of NCSU OSGeoREL courses">
-        <meta name="author" content="Vaclav Petras">
-
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
-
-        <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
-
-        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-        <script>
-            if( window.location.search.match( /print-pdf/gi ) ) {
-                var link = document.createElement( 'link' );
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'css/print/pdf.css';
-                document.getElementsByTagName( 'head' )[0].appendChild( link );
-            }
-        </script>
-
-        <!--[if lt IE 9]>
-        <script src="lib/js/html5shiv.js"></script>
-        <![endif]-->
-
-        <style>
-        * {
-            /*font-family: Verdana, Geneva, sans-serif !important;*/
-        }
-        body {
-        /*background-color: #FFF !important;*/
-        /*
-          background-image: url("pictures/elevation-nagshead.gif");
-          background-repeat: no-repeat;
-          background-position: left bottom;*/
-        }
-        .reveal section img {
-            background: transparent;
-            border: 0;
-            box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
-        }
-        /* for standalone frame */
-        /*
-        iframe {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        */
-        /* display: inline; background-color: #002B36; padding: 0px; margin: 0px */
-        .rounded-corners {
-            border: 0px solid black;
-            border-radius: 5px;
-            -moz-border-radius: 5px;
-            -khtml-border-radius: 5px;
-            -webkit-border-radius: 5px;
-        }
-        a {
-            color: #060 !important;
-        }
-        a:hover {
-            color: #060 !important;
-            text-decoration: underline !important;
-        }
-        h1, h2, h3, h4, h5 {
-            text-transform: none !important;
-            /* word-break: keep-all; text-transform: none; font-size: 200%; line-height: 110%; */
-            color: #060 !important;
-            /* color: #444 !important; */ /* grey from the wab page */
-            font-weight: bold !important;
-            -webkit-hyphens: none !important;
-            -moz-hyphens: none !important;
-            -ms-hyphens: none !important;
-            hyphens: none !important;
-            line-height: 110% !important;
-        }
-        .reveal .progress span {
-            background-color: #060 !important;
-        }
-        /* predefined element positioning */
-        .top {
-            /*position: relative;*/
-            top: 5%;
-            height: 45%; /* is the height even needed? */
-        }
-        .bottom {
-            height: 45%;
-        }
-        .ne {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            height: 45%;
-            width: 45%;
-        }
-        .nw {
-            position: absolute;
-            top: 5%;
-            left: 5%;
-            height: 45%;
-            width: 45%;
-        }
-        .se {
-            position: absolute;
-            bottom: 5%;
-            right: 5%;
-            height: 45%;
-            width: 45%;
-        }
-        .sw {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
-            height: 45%;
-            width: 45%;
-        }
-
-        /* two columns which work with extra wide screen */
-        /* usable in place of left right but requires two wrapper divs */
-        .col-cont-out {
-            clear: left;
-            float: left;
-            width: 100%;
-            overflow: hidden;
-        }
-        .col-cont-in {
-            float: left;
-            width: 100%;
-            position: relative;
-            right: 50%;
-        }
-        .col1 {
-            float: left;
-            width: 46%;
-            position: relative;
-            left: 52%;
-            overflow: hidden;
-        }
-        .col1 > * {
-            float: right;
-        }
-        .col2 {
-            float: left;
-            width: 46%;
-            position: relative;
-            left: 56%;
-            overflow: hidden;
-        }
-        .col2 > * {
-            float: left;
-        }
-
-        /* classes for sections with predefined elements */
-        /* classes for sections with predefined elements */
-        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
-            float: right;
-            text-align: left;
-            max-width: 47%;
-        }
-        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
-            float: left;
-            text-align: left;
-            max-width: 47%;
-        }
-        li > ul, li > ol {
-            font-size: 85% !important;
-            line-height: 110% !important;
-        }
-        </style>
-    </head>
-
-    <body>
-
-        <div class="reveal">
-
-<!-- Any section element inside of this container is displayed as a slide -->
-
-<!-- Title page -->
-<div class="slides">
 <section>
-<h2>Coffee &amp; Viz:</h2>
+<h2>Coffee &amp; Viz</h2>
 <h1>Serious Gaming with Tangible Landscape</h1>
-<h3 style="margin-top: 2em">Center for Geospatial Analytics</h3>
-<h4 style="margin-top: 2em">Brendan Harmon &amp; Anna Petrasova</h4>
-<p></p>
-<br>
-<img height="100" src="img/grasslogoanim.gif">
+<h3 style="margin-top: 2em">Brendan Harmon, Anna Petrasova, &amp; Vaclav Petras</h3>
+<img height="100px" style="margin-top: 2em" src="img/cgaBlack.png">
 </section>
 
-<!-- 
+<!-- Scientific modeling -->
+<section data-background="img/grass_screenshot_2.png">
+<h1 style="text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
+Computational modeling</h1>
+<aside class="notes">
+With computers we can scientifically model complex problems. Interacting with computers, however, can be unintuitive, inaccessible, hard-to-learn, decontextualized, unsituated, and uncollaborative.
+</aside>
+</section>
+
+<!-- Tangible Landscape -->
 <section data-background="img/tangible_landscape.jpg">
 <h2 style="text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
-Coffee &amp; Viz:</h2>
+Developing games with</h2>
 <h1 style="text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
-Serious Gaming with Tangible Landscape</h1>
-<h3 style="margin-top: 2em; text-shadow: 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 5px white, 0 0 4px white, 0 0 3px white, 0 0 2px white, 0 0 1px white; color:black !important;">Center for Geospatial Analytics</h3>
-<h3 style="margin-top: 1em; text-shadow: 0 0 6px white, 0 0 6px white, 0 0 5px white, 0 0 5px white, 0 0 4px white, 0 0 3px white, 0 0 2px white, 0 0 1px white; color:black !important;">Brendan Harmon &amp; Anna Petrasova</h3>
-<p></p>
-</section>
--->
-
-<!-- Serious gaming -->
-<section>
-<h2 style="margin-top: -2em">Serious gaming</h2>
-<br>
-<p>An approach to problem solving that is:</p>
-<ul>
-<li>engaging</li>
-<li>motivating</li>
-<li>stimulates thinking about thinking</li>
-<li><b>fun!</b></li>
-</ul>
+Tangible Landscape</h1>
+<h3 style="margin-top: 1.5em; text-shadow: 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 5px white, 0 0 4px white, 0 0 3px white, 0 0 2px white, 0 0 1px white; color:black !important;">A tangible user interface powered by open source GIS</h3>
+<img height="250px" style="margin-top: 0.75em" src="img/logo_bw.svg">
 </section>
 
-<!-- Scientific method -->
+<!-- Concept -->
 <section>
-<h2 style="margin-top: -2em">Science as problem solving</h2>
-<br>
-<p>The scientific method as a iterative problem solving process</p>
-<ul>
-<li>observe</li>
-<li>hypothesize</li>
-<li>test</li>
-<li>...</li>
-</ul>
+<h2 style="margin-top: -2em">Coupling a digital and physical model of a landscape</h2><br>
+<p>Physically manifesting digital data so that you can intuitively feel and shape it with your hands</p>
+<img style="margin-top: 1em" height="600" src="img/tl_fill_dir_s_6.png">
+<img height="600px" src="img/tl_fill_dir_s_6_interaction.png">
+<img height="600px" src="img/tl_fill_dir_s_7.png">
+</section>
+
+<!-- Real time -->
+<section>
+<h2 style="margin-top: -2em">Near real-time interaction</h2>
+<video style="margin-top: 1em" controls>
+<source src="img/tl_dam.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </section>
 
 <!--
 <section>
-<h2 style="margin-top: -2em">Design as problem solving</h2>
-<br>
-<p>Design as an iterative problem solving process</p>
-<ul>
-<li>ideation</li>
-<li>creation</li>
-<li>analysis</li>
-<li>critique</li>
-<li>...</li>
-</ul>
+<h2 style="margin-top: -2em">Near real-time interaction</h2>
+<video style="margin-top: 1em" controls>
+<source src="img/landscape_planning.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </section>
 -->
 
-<!-- Making a game -->
+<!-- How it works -->
+<section>
+<h2 style="margin-top: -2em">How-it-works</h2>
+<div class="col-cont-out"><div class="col-cont-in">
+<div class="col1">
+<img style="margin-top: 1em" height="720" src="img/system_schema.png">
+</div>
+<div class="col2">
+<img height="720" src="img/system_cycle.png">
+</div>
+</div></div>
+</section>
+
+<!--
+<section>
+<h2 style="margin-top: -2em">How-it-works</h2>
+<img style="margin-top: 1em" height="720" src="img/system_schema.png">
+</section>
+
+<section>
+<h2 style="margin-top: -2em">Cycle</h2>
+<img height="720px" src="img/system_cycle.png">
+</section>
+-->
+
+<!--
+<section>
+<h2 style="margin-top: -2em">Intuitive scientific modeling with Tangible Landscape</h2>
+<br>
+<img width="50%" src="img/tanland_composit2.png">
+<aside class="notes">
+Tangible Landscape is designed to make scientific data, models, and simulations easy to interact with easy to explore and understand engaging and fun!
+</aside>
+</section>
+-->
+
+<!-- Science with Tangible Landscape -->
+<section>
+<h2 style="margin-top: -2em">Intuitive scientific modeling with Tangible Landscape</h2>
+<br>
+<img width="25%" src="img/subsurface_1.jpg">
+<img width="25%" src="img/subsurface_2.jpg">
+<img width="40.55%" src="img/subsurface_3.jpg">
+<aside class="notes">
+Tangible Landscape is designed to make scientific data, models, and simulations easy to interact with easy to explore and understand engaging and fun!
+</aside>
+</section>
+
+<!-- 
+<section data-background="img/subsurface_3.jpg">
+<h1 style="margin-top: -2em; text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
+Intuitive scientific modeling</h1>
+<aside class="notes">
+Serious games with Tangible Landscape are driven by interactive scientific models, analytical, and engaging.
+</aside>
+</section>
+-->
+
+<!-- Serious gaming with Tangible Landscape
+<section>
+<h1 style="margin-top: -2em">Serious gaming with Tangible Landscape</h1>
+<br>
+<p>
+<br>
+<img width="50%" src="img/games_composit.png">
+<aside class="notes">
+Serious games with Tangible Landscape are driven by interactive scientific models, analytical, and engaging.
+</aside>
+</section>
+-->
+  
+<!-- How we made games for Tangible Landscape -->
 <section>
 <h2 style="margin-top: -2em">Scientific gaming</h2>
 <br>
@@ -267,7 +137,63 @@ Serious Gaming with Tangible Landscape</h1>
 </ul>
 </section>
 
-<!-- Challenges -->
+<!-- Serious gaming with Tangible Landscape: Termites -->
+<section>
+<h2 style="margin-top: -2em">Termite game</h2>
+<br>
+<img width="30%" src="img/termite_game_1.jpg">
+<img width="30%" src="img/termite_game_2.jpg">
+<img width="30%" src="img/termite_game_3.jpg">
+</section>
+
+<!-- Serious gaming with Tangible Landscape: Coastal -->
+<section>
+<h2 style="margin-top: -2em">Coastal game</h2>
+<br>
+<img width="22%" src="img/tl_coastal_1s.png">
+<img width="22%" src="img/tl_coastal_2s.png">
+<img width="22%" src="img/tl_coastal_3s.png">
+<img width="22%" src="img/tl_coastal_4s.png">
+</section>
+
+<!--
+<section>
+<h2 style="margin-top: -2em">Serious gaming</h2>
+<br>
+<p>An approach to problem solving that is:</p>
+<ul>
+<li>engaging</li>
+<li>motivating</li>
+<li>stimulates thinking about thinking</li>
+<li><b>fun!</b></li>
+</ul>
+</section>
+
+<section>
+<h2 style="margin-top: -2em">Science as problem solving</h2>
+<br>
+<p>The scientific method as a iterative problem solving process</p>
+<ul>
+<li>observe</li>
+<li>hypothesize</li>
+<li>test</li>
+<li>...</li>
+</ul>
+</section>
+
+<section>
+<h2 style="margin-top: -2em">Scientific gaming</h2>
+<br>
+<p>To make scientific problem solving a game we need:</p>
+<ul>
+<li>goals</li>
+<li>rules</li>
+<li>interactivity</li>
+<li>challenging tasks</li>
+<li>scores</li>
+</ul>
+</section>
+
 <section>
 <h2 style="margin-top: -2em">Challenges to scientific gaming</h2>
 <br>
@@ -283,74 +209,7 @@ Serious Gaming with Tangible Landscape</h1>
 </ul>
 </section>
 
-<!-- Tangible Landscape -->
-<section data-background="img/tangible_landscape.jpg">
-<h2 style="text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
-Developing games with</h2>
-<h1 style="text-shadow: 0 0 10px white, 0 0 9px white, 0 0 8px white, 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 4px white, 0 0 3px white; color:black !important;">
-Tangible Landscape</h1>
-<h3 style="margin-top: 2em; text-shadow: 0 0 7px white, 0 0 6px white, 0 0 5px white, 0 0 5px white, 0 0 4px white, 0 0 3px white, 0 0 2px white, 0 0 1px white; color:black !important;">A tangible user interface powered by open source GIS</h3>
-<p></p>
-</section>
-
-<!-- Concept -->
 <section>
-<h2 style="margin-top: -1em">Coupling a digital and physical model of a landscape</h2>
-<p>Physically manifesting digital data so that you can intuitively feel and shape it with your hands</p>
-<img style="margin-top: 1em" height="600" src="img/tl_fill_dir_s_6.png">
-<img height="600" src="img/tl_fill_dir_s_6_interaction.png">
-<img height="600" src="img/tl_fill_dir_s_7.png">
-</section>
-
-<!-- Video -->
-<!-- <section>
-<h2 style="margin-top: -2em">Near real-time interaction</h2>
-<p>Sculping topography to change a stream</p>
-<video style="margin-top: 1em" controls>
-<source src="img/landscape_planning.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</section> -->
-
-<!-- How it works -->
-<section>
-<h2 style="margin-top: -2em">How-it-works</h2>
-<div class="col-cont-out"><div class="col-cont-in">
-<div class="col1">
-<img style="margin-top: 1em" height="720" src="img/system_schema.png">
-</div>
-<div class="col2">
-<img height="500" src="img/TL_circle.png">
-</div>
-</div></div>
-</section>
-
-<!-- Science with Tangible Landscape -->
-<section>
-<h2 style="margin-top: -2em">Intuitive modeling with Tangible Landscape</h2>
-<p>Tangible Landscape is designed to make scientific data, models, and simulations
-easy to interact with,
-easy to explore and understand,
-engaging and fun!
-</ul>
-<br>
-<img width="50%" src="img/tanland_composit2.png">
-</section>
-
-<!-- Serious gaming with Tangible Landscape -->
-<section>
-<h2 style="margin-top: -2em">Serious gaming with Tangible Landscape</h2>
-<br>
-<p>Serious games with Tangible Landscape are
-driven by interactive scientific models, analytical,
-and engaging.
-<br>
-<img width="50%" src="img/games_composit.png">
-
-</section>
-
-<!-- Goals -->
-<!-- <section>
 <h2 style="margin-top: -2em">Goals</h2>
 <br>
 <p>Our goals are to enhance:</p>
@@ -360,9 +219,8 @@ and engaging.
 <li>decision making</li>
 <li>consensus building</li>
 </ul>
-</section> -->
+</section>
 
-<!-- 
 <section data-background="img/yakima_6.jpg">
 <h2 style="margin-top: -2em">NCSU OSGeoREL</h2>
 <h3><a href="geospatial.ncsu.edu/osgeorel">NCSU Open Source Geospatial Research and Education Laboratory</a></h3>
@@ -372,123 +230,3 @@ and engaging.
 </section>
 -->
 
-    
-    <!-- This is a generated file. Do not edit. -->
-        </div>  <!-- slides -->
-
-    </div>  <!-- reveal -->
-
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
-
-        <script>
-
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                // Display controls in the bottom right corner
-                controls: false,
-
-                // Display a presentation progress bar
-                progress: true,
-                
-                center: true,
-                
-                // Display the page number of the current slide
-                slideNumber: false,
-
-                // Enable the slide overview mode
-                overview: true,
-
-                // Turns fragments on and off globally
-                fragments: true,
-
-                // The "normal" size of the presentation, aspect ratio will be preserved
-                // when the presentation is scaled to fit different resolutions. Can be
-                // specified using percentage units.
-               width: 3500,
-               height: 600,
-                
-                // Factor of the display size that should remain empty around the content
-                margin: 0.05,  // increase?
-
-                // Bounds for smallest/largest possible scale to apply to content
-                minScale: 0.5,
-                maxScale: 5.0,
-
-                theme: Reveal.getQueryHash().theme,  // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
-
-                // Push each slide change to the browser history
-                history: true,
-                // Enable keyboard shortcuts for navigation
-                keyboard: true,
-
-                // Vertical centering of slides
-                center: true,
-
-                // Enables touch navigation on devices with touch input
-                touch: true,
-
-                // Loop the presentation
-                loop: false,
-                // Flags if the presentation is running in an embedded mode,
-                // i.e. contained within a limited portion of the screen
-                embedded: false,
-
-                // Number of milliseconds between automatically proceeding to the
-                // next slide, disabled when set to 0, this value can be overwritten
-                // by using a data-autoslide attribute on your slides
-                autoSlide: 0,
-
-                // Stop auto-sliding after user input
-                autoSlideStoppable: true,
-
-                // Enable slide navigation via mouse wheel
-                mouseWheel: false,
-
-                // Hides the address bar on mobile devices
-                hideAddressBar: true,
-
-                // Opens links in an iframe preview overlay
-                previewLinks: false,
-
-                // Transition speed
-                transitionSpeed: 'default', // default/fast/slow
-
-                // Transition style for full page slide backgrounds
-                backgroundTransition: 'none', // default/none/slide/concave/convex/zoom
-
-                // Number of slides away from the current that are visible
-                viewDistance: 3,
-
-                // Parallax background image
-                //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-
-                // Parallax background size
-                //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
-
-                // Optional libraries used to extend on reveal.js
-                dependencies: [
-                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'plugin/math/math.js', async: true }
-                ],
-
-                math: {
-                    mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
-                    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-                }
-            });
-
-        </script>
-        <script type="text/javascript"
-    src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-    </body>
-</html>
